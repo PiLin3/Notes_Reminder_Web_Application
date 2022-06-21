@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>CRUD Application</title>
+  </head>
+  <body>
+    <header>
+      <h1>Reminder Notes</h1>
+    </header>
+    <div class="view-port-container">
+      <table class="notes-container">
+        <caption>
+          Notes
+          <button type="button" class="note-btn add"></button>
+        </caption>
+        <thead>
+          <tr class="note-template">
+            <th id="table-title">Title</th>
+            <th>Note</th>
+            <th>Date</th>
+            <th class="item-align">Priority</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="new-note-temp">
+        <form>
+          <button class="close"></button>
+          <div class="input-container">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" />
+          </div>
+          <div class="input-container">
+            <label for="note">Note:</label>
+            <textarea name="note" id="note" cols="50" rows="10"></textarea>
+          </div>
+          <div class="input-container horizontal-dir">
+            <div>
+              <label for="date">Date:</label>
+              <input type="date" id="date" name="date" />
+            </div>
+            <div>
+              <label for="priority">Priority:</label>
+              <select name="priority" id="priority">
+                <option value="high">High</option>
+                <option value="avg">Average</option>
+                <option value="low">Low</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <input type="submit" id="submit" value="Add" />
+            <button type="button" id="save">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; Made By Mahmoud Hamdan</p>
+      <p class="source">
+        <a href="https://github.com/PiLin3/Notes_Reminder_Web_Application"
+          >Source Code</a
+        >
+      </p>
+      <p>
+        <a href="https://pilin3.github.io/#projects-section">Other Projects</a>
+      </p>
+    </footer>
+    <script src="crud.js"></script>
+  </body>
+</html>
